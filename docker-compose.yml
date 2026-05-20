@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: employee_postgres
+    environment:
+      POSTGRES_DB: employee_db
+      POSTGRES_USER: bojan
+      POSTGRES_PASSWORD: bojan
+    ports:
+      - "5433:5432"
+    volumes:
+      - employee_postgres_data:/var/lib/postgresql/data
+    networks:
+      - employee_network
+
+  adminer:
+    image: adminer
+    container_name: employee_adminer
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    networks:
+      - employee_network
+
+volumes:
+  employee_postgres_data:
+
+networks:
+  employee_network:
