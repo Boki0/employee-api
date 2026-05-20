@@ -1,0 +1,10 @@
+package com.bojan.employeeapi.model;
+
+public enum AuditAction {
+    EMPLOYEE_CREATED,
+    EMPLOYEE_DETAILS_FETCHED,
+    EMPLOYEES_SEARCHED,
+    SALARY_UPDATED,
+    SALARY_ANALYTICS_REQUESTED,
+    AUDIT_LOGS_FETCHED
+}
