@@ -31,3 +31,22 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Logs ###
+*.log
+logs/
+
+### Environment / secrets ###
+.env
+.env.*
+!.env.example
+application-local.properties
+application-*.local.properties
+
+### Docker local override ###
+docker-compose.override.yml
