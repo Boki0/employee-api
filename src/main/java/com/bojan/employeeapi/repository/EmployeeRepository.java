@@ -18,4 +18,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
             String firstName,
             String lastName
     );
+    List<Employee> findTop5ByOrderBySalaryDesc();
 }
